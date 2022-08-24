@@ -8,12 +8,13 @@ let miliSeconds = 0;
 
 btns.forEach(function (e) {
   e.addEventListener("click", function () {
-    if (e.dataset.id == 1) {
-      stopMiliseconds = setInterval(countMiliseconds, 10);
-    } else if (e.dataset.id == 2) {
-      clearInterval(stopMiliseconds);
+    var x = parseInt(e.dataset.id);
+    if (x === 1) {
+      stop = setInterval(countMiliseconds, 10);
+    } else if (x === 2) {
+      clearInterval(stop);
     } else {
-      clearInterval(stopMiliseconds);
+      clearInterval(stop);
       resetValue();
     }
   });
@@ -21,7 +22,7 @@ btns.forEach(function (e) {
 
 const countMiliseconds = () => {
   miliSeconds++;
-  if (miliSeconds == 100) {
+  if (miliSeconds == 99) {
     miliSeconds = 0;
     seconds++;
   }
