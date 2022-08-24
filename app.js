@@ -12,6 +12,7 @@ btns.forEach(function (e) {
       stopMiliseconds = setInterval(countMiliseconds, 10);
     } else if (e.dataset.id == 2) {
       clearInterval(stopMiliseconds);
+    } else {
       clearInterval(stopMiliseconds);
       resetValue();
     }
