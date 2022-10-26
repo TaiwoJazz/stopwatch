@@ -2,9 +2,9 @@
 const btns = document.querySelectorAll(".btn");
 const items = document.querySelectorAll('.timer h2')
 
-let minutes = 0;
-let seconds = 0;
-let miliSeconds = 0;
+let minutes = 0
+let seconds = 0
+let miliSeconds = 0
 
 btns.forEach(function (e) {
   e.addEventListener("click", function () {
